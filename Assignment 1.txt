@@ -7,7 +7,9 @@ Assignment 1        date-April 10 2020
 
 
 Answer-1
-mkdir -p a/b/c b/d/e c/f/g d/i/j g/j i/m/z
+The -p flag tells the mkdir command to create the main directory first if it doesn’t already exist . The words in the brackets are part of the “brace expansion list”. Each of the items in the brace expansion list is appended separately to the preceding path .
+
+mkdir -p a/{b,c} b/{d,e} c/{f,g} d/{i,j} g/{k,l,z} i/{m/z}
 
 answer 2-
 
@@ -20,6 +22,10 @@ chown test.test /home/test/command
 cp /usr/bin/date /home/test/command
 chmod 755 /home/test/date
 
+Answer 3-
+copy the data of user one to user 2
 
+
+>> scp file1 user2@localhost:/home/user2?
 Answer4-
 cal >>output.txt
