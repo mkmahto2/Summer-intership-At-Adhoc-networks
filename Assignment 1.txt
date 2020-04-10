@@ -9,4 +9,17 @@ Assignment 1        date-April 10 2020
 Answer-1
 mkdir -p a/b/c b/d/e c/f/g d/i/j g/j i/m/z
 
+answer 2-
 
+>>cp /bin/bash/ /bin/rbash
+useradd -s /bin/rbash test
+mkdir /home/test/commands
+chmod O+X /bin/rbash
+passwd test
+chown test.test /home/test/command
+cp /usr/bin/date /home/test/command
+chmod 755 /home/test/date
+
+
+Answer4-
+cal >>output.txt
