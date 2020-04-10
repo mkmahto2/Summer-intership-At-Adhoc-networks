@@ -1,0 +1,12 @@
+Assignment 1        date-April 10 2020
+1. create directory structure
+2. Permission for date command
+3. User data copy
+4. Run CAL command for 10 sec and store output in the file.
+
+
+
+Answer-1
+mkdir -p a/b/c b/d/e c/f/g d/i/j g/j i/m/z
+
+
