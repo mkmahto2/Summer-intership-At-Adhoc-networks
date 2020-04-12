@@ -1,0 +1,58 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hellomukesh
+  labels:
+    app: hellomukesh  
+spec:
+  containers:
+    - name: container1
+      image: alpine
+      command:
+        - '/bin/sh'
+      args:
+        - '-c'
+        - 'ping 8.8.8.8 -i 10 > /tmp/adhoc.txt'
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello1mukesh
+  labels:
+    app: hello1mukesh 
+spec:
+  containers:
+    - name: container2
+      image: busybox
+      command:
+        - '/bin/sh'
+      args:
+        - '-c'
+        - 'cat'
+      stdin: true
+      workingDir: /opt
+
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: hello2mukesh
+  labels:
+    app: hello2mukesh
+spec:
+  containers:
+    - name: container3
+      image: alpine
+      stdin: true
+      command:
+        - "cat"
+
+# kubectl cp hellomukesh:/tmp/adhoc.txt adhoc.txt
+# kubectl cp adhoc.txt hello1mukesh:/opt/adhoc.txt
+# kubectl exec hello1mukesh -- /bin/sh -c "cat adhoc.txt | wc -c > count.txt"
+# kubectl get pod -o wide | awk '{ print $6 }' | grep "[0-9].*" > IP.txt
+# kubectl cp IP.txt hello2mukesh:/root/IP.txt
+
+
+
