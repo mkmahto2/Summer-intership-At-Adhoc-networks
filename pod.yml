@@ -47,6 +47,26 @@ spec:
       stdin: true
       command:
         - "cat"
+# Assignment No2- date april 12 2020
+#Q1. POD basic
+#create a pod with the following features
+# *name of pod hello(your name)
+# Alpine image use
+# Run ping 8.8.8.8 in every 10 second
+# store output under /temp/adhoc.txt
+
+
+#Q2. create a pod
+#create a pod with the following features
+# *name of pod hello(your name)
+# busybox image use
+#give any command that can keep pod live under /opt location and count no of character and store in count.txt
+
+#Q3. create pod
+#use alpine
+#keep command to keep pod live
+#once pod is running 
+#write some command in client machine of kubernetes and store all ip address above created pod and then store in a file called ip.txt
 
 # kubectl cp hellomukesh:/tmp/adhoc.txt adhoc.txt
 # kubectl cp adhoc.txt hello1mukesh:/opt/adhoc.txt
