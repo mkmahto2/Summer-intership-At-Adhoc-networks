@@ -6,26 +6,56 @@ Assignment 1        date-April 10 2020
 
 
 
-Answer-1
-The -p flag tells the mkdir command to create the main directory first if it doesn’t already exist . The words in the brackets are part of the “brace expansion list”. Each of the items in the brace expansion list is appended separately to the preceding path .
-
-mkdir -p a/{b,c} b/{d,e} c/{f,g} d/{i,j} g/{k,l,z} i/{m/z}
-
-answer 2-
-
->>cp /bin/bash/ /bin/rbash
-useradd -s /bin/rbash test
-mkdir /home/test/commands
-chmod O+X /bin/rbash
-passwd test
-chown test.test /home/test/command
-cp /usr/bin/date /home/test/command
-chmod 755 /home/test/date
-
-Answer 3-
-copy the data of user one to user 2
+## task 1 
 
 
->> scp file1 user2@localhost:/home/user2?
-Answer4-
-cal >>output.txt
+ mkdir -p a/{b/{d/{i/m/z,j/l/z},e},c/{f/h/l/z,g/k/l/z}}
+
+#output of task 1
+tree a
+a
+├── b
+│   ├── d
+│   │   ├── i
+│   │   │   └── m
+│   │   │       └── z
+│   │   └── j
+│   │       └── l
+│   │           └── z
+│   └── e
+└── c
+    ├── f
+    │   └── h
+    │       └── l
+    │           └── z
+    └── g
+        └── k
+            └── l
+                └── z
+                
+##########################################
+#task 2:     set permision for user to execute date cmd
+date
+which date
+ls -l /bin/date
+chmod -x /bin/date
+date
+adduser -s /bin/date mukesh
+su - neha
+setfacl -m u:mukesh:wrx /bin/date
+su - mukesh
+setfacl -m u:root:--- /bin/date
+chmod -x/bin/date
+date
+
+
+
+
+                
+                
+                
+                
+#task 4 :execute cal cmd 10 times and store in a file
+
+# here is the ans
+for i in 0 1 2 3 4 5 6 7 8 9; do cal>> exmp.txt; sleep 1;done
