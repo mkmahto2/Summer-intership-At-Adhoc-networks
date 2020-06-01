@@ -1,0 +1,10 @@
+ 1049  ls
+ 1050  cd assign4task3/
+ 1051  ls
+ 1052  rm index.html
+ 1053  ls
+ 1054  rm cat
+ 1055  ls
+ 1056  rm docker.txt 
+ 1057  history -10 >history.txt
+ 1058  history 10 >history.txt
