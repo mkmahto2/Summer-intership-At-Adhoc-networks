@@ -1,0 +1,20 @@
+  974  sudo docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -h $HOSTNAME -v $HOME/.Xauthority:/home/rhythm/.Xauthority rhythmguifirefox
+  975  [A
+  976  sudo docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -h $HOSTNAME -v $HOME/.Xauthority:/home/rhythm/.Xauthority rhythmguifirefox
+  977  sudo docker run -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=$DISPLAY -h $HOSTNAME -v $HOME/.Xauthority:/home/mukesh/.Xauthority mukeshfirefox
+  978  docker stats --all --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}" > Ram.txt
+  979  cat Ram.txt
+  980  ls
+  981  cd ..
+  982  ls
+  983  cat Ram.txt
+  984  ls
+  985  docker stats --all --no-stream --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}" > Ram.txt
+  986  git add .
+  987  git push origin master
+  988  git commit -m   "adding new file"
+  989  git push origin master
+  990  history -10 >history.txt
+  991  history 10 >history.txt
+  992* 
+  993  history 20 >history.txt
