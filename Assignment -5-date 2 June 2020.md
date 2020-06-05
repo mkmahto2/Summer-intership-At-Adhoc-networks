@@ -1,3 +1,4 @@
+
 ASSIGNMENT NO 5
 DATE 3 JUNE 2020
 
@@ -5,7 +6,7 @@ DATE 3 JUNE 2020
 # TASK
 To create a database on the server and access the database.
 
-
+git clone https://github.com/mkmahto2/springboot-k8s-mysql.git
 ## bulid the image from Dockerfile 
 ~~~
 docker run -it springboot-k8s-mysql:1.0 .
